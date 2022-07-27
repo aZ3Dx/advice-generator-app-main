@@ -2,7 +2,8 @@
 
 :root {
     --Light-Cyan: hsl(193, 38%, 86%);
-    --Neon-Green: hsl(150, 100%, 66%);
+    --Neon-Green: hsl(150, 100%, 61%);
+    --Neon-Green-Variant: hsl(150, 86%, 41%);
 
     --Grayish-Blue: hsl(217, 19%, 38%);
     --Dark-Grayish-Blue: hsl(217, 19%, 24%);
@@ -77,6 +78,26 @@ main {
     transition: box-shadow .3s ease;
 }
 
+.attr-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.attr-container_content {
+    font-size: 14px;
+    color: var(--Light-Cyan);
+    text-align: center;
+}
+
+.attr-container_content a {
+    text-decoration: none;
+    color: var(--Neon-Green);
+}
+.attr-container_content a:hover {
+    color: var(--Neon-Green-Variant);
+}
+
 @media (max-width: 540px) {
     .slip-container {
         padding: 44px 20px 40px 20px;
@@ -94,5 +115,15 @@ main {
 
     .slip-container_divider {
         margin-bottom: 20px;
+    }
+
+    .attr-container_content {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .slip-container_divider img {
+        width: 100%;
     }
 }
